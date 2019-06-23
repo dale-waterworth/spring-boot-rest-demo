@@ -8,6 +8,7 @@ Create a MySQL instance currently set to:
 - spring.datasource.url=jdbc:mysql://localhost:3306/demotest
 - spring.datasource.username=root
 - spring.datasource.password=
+
 Xamp on windows was used to create the DB 'demotest'
 
 Run the tests - Right click run as JUNIT Test 
