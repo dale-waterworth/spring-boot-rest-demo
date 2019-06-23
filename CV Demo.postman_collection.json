@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "afdc4650-840a-4505-b184-b3e328bbf0c2",
+		"name": "CV Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "save cv",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"dale\",\n    \"email\": \"dale.waterworth@gmail.com\",\n    \"companyHistory\": [\n        {\n            \"name\": \"Dales company 1\",\n            \"fromDate\": [\n                2018,\n                6,\n                23,\n                13,\n                0\n            ],\n            \"toDate\": [\n                2019,\n                6,\n                23,\n                13,\n                0\n            ]\n        },\n        {\n            \"name\": \"Dales company 2\",\n             \"fromDate\": [\n                2016,\n                6,\n                23,\n                13,\n                0\n            ],\n            \"toDate\": [\n                2017,\n                6,\n                23,\n                13,\n                0\n            ]\n        },\n        {\n            \"name\": \"Dales company 3\",\n             \"fromDate\": [\n                2015,\n                6,\n                23,\n                13,\n                0\n            ],\n            \"toDate\": [\n                2016,\n                6,\n                23,\n                13,\n                0\n            ]\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/cv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get cv",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cv/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cv",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save histories",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " [\n        {\n        \t\"id\": 1,\n            \"name\": \"Dales company \",\n            \"fromDate\": 1561194823706,\n            \"toDate\": 1561194823706,\n            \"user_id\": 1\n        }\n    ]\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/cv/companyHistory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cv",
+						"companyHistory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add history",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Dales company added\",\n    \"fromDate\": 1561194823706,\n    \"toDate\": 1561194823706\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/cv/1/companyHistory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cv",
+						"1",
+						"companyHistory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add skill",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Dales company added\",\n    \"fromDate\": 1561194823706,\n    \"toDate\": 1561194823706\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/cv/1/companyHistory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cv",
+						"1",
+						"companyHistory"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
